@@ -1,5 +1,5 @@
 const express = require('express');
-const PORT = 4000;
+const port = process.env.PORT || 4000;
 const app = express();
 const date = require(__dirname + '/date.js');
 const items = ["Buy Food", "Cook Food", "Eat Food"];
@@ -45,6 +45,6 @@ app.get('/about', (req,res)=>{
 //     res.redirect('/work')
 // })
 
-app.listen(PORT,()=>{
-    console.log(`This port is located on ${PORT} welcome aboard and enjoy`)
+app.listen(port,()=>{
+    console.log(`This port is located on ${port} welcome aboard and enjoy`)
 })
